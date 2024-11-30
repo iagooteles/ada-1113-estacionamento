@@ -18,7 +18,7 @@ public class VeiculoService {
         boolean veiculoJaExiste = repository.existsById(veiculo.getPlaca());
 
         if(veiculoJaExiste){
-            throw new RuntimeException();
+            throw new RuntimeException("Veiculo ja existente");
         }
 
         // salvar se Ok
@@ -30,7 +30,7 @@ public class VeiculoService {
         boolean veiculoJaExiste = repository.existsById(veiculo.getPlaca());
 
         if(!veiculoJaExiste){
-            throw new RuntimeException();
+            throw new RuntimeException("Veiculo não existente");
         }
 
         // salvar se Ok
